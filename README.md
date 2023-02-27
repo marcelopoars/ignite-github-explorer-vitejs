@@ -1,3 +1,4 @@
 # GitHub Explorer
 
-Um projeto desenvolvido no Ignite - Trilha ReacJs
+A simple project with ViteJs, ReacJs, TypeScript, TailwindCss and GitHub API.
+
