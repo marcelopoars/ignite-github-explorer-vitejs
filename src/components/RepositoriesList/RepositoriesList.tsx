@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { RepositoryItem } from "../RepositoryItem/RepositoryItem";
 import { Repository } from "../RepositoryItem/interfaces";
 
-export function RepositoryList() {
+export const RepositoriesList = () => {
   const [repositories, setRepositories] = useState<Repository[]>([]);
 
   useEffect(() => {
@@ -13,14 +13,14 @@ export function RepositoryList() {
   }, []);
 
   return (
-    <section className="repository-list">
-      <h1>Lista de repositórios</h1>
+    <section className="container py-8">
+      <h1>My GitHub Repositories</h1>
 
-      <ul>
+      <ul className="pt-8">
         {repositories.map((repository) => (
           <RepositoryItem key={repository.name} repository={repository} />
         ))}
       </ul>
     </section>
   );
-}
+};

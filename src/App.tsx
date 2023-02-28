@@ -1,7 +1,6 @@
 import { RepositoryList } from "./components";
+import { RepositoriesPage } from "./pages";
 
 import "./styles/globals.css";
 
-export function App() {
-  return <RepositoryList />;
-}
+export const App = () => <RepositoriesPage />;
