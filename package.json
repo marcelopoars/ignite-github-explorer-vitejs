@@ -1,5 +1,12 @@
 {
   "name": "ignite-github-explorer-vitejs",
+  "keywords": [
+    "react",
+    "github-api",
+    "tailwindcss",
+    "typescript",
+    "vitejs"
+  ],
   "private": true,
   "version": "1.0.0",
   "author": {
