@@ -17,12 +17,17 @@ export const RepositoriesPage = () => {
   }, []);
 
   return (
-    <div>
-      {isLoading ? (
-        <Loading text="Buscando repositórios..." />
-      ) : (
-        <RepositoriesList repositories={repositories} />
-      )}
-    </div>
+    <section className="container py-8">
+      <div className="flex gap-12">
+        <div className="min-w-48">
+          <div className="sticky top-12">
+            <h1>Marcelo Pereira</h1>
+            <p>Frontend Developer</p>
+          </div>
+        </div>
+
+        <RepositoriesList repositories={repositories} isLoading={isLoading} />
+      </div>
+    </section>
   );
 };

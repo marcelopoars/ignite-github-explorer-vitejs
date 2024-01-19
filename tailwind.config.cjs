@@ -15,6 +15,9 @@ module.exports = {
       },
       green: {
         500: "#238636",
+      },
+      white: {
+        DEFAULT: '#FFFFFF'
       }
     },
     container: {
@@ -23,7 +26,7 @@ module.exports = {
         DEFAULT: "1.5rem",
         sm: "2rem",
         lg: "3rem",
-      },
+      }
     },
     extend: {},
   },

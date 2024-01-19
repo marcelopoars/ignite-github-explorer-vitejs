@@ -1,20 +1,25 @@
 import { Repository } from "../../Models";
+import { Loading } from "../Loading";
 import { RepositoryItem } from "../RepositoryItem";
 
 interface RepositoriesListProps {
   repositories: Repository[];
+  isLoading: boolean;
 }
 
-export const RepositoriesList = ({ repositories }: RepositoriesListProps) => {
-  return (
-    <section className="container py-8">
-      <h1>My GitHub Repositories</h1>
+export const RepositoriesList = ({
+  repositories,
+  isLoading,
+}: RepositoriesListProps) => {
+  if (isLoading) {
+    return <Loading text="Buscando repositórios..." />;
+  }
 
-      <ul className="pt-8">
-        {repositories.map((repository) => (
-          <RepositoryItem key={repository.name} repository={repository} />
-        ))}
-      </ul>
-    </section>
+  return (
+    <ul>
+      {repositories.map((repository) => (
+        <RepositoryItem key={repository.name} repository={repository} />
+      ))}
+    </ul>
   );
 };
