@@ -21,12 +21,15 @@ export const RepositoriesPage = () => {
       <div className="flex gap-12">
         <div className="min-w-48">
           <div className="sticky top-12">
-            <h1>Marcelo Pereira</h1>
+            <h1 className="text-4xl text-gray-50">Marcelo Pereira</h1>
             <p>Frontend Developer</p>
           </div>
         </div>
 
-        <RepositoriesList repositories={repositories} isLoading={isLoading} />
+        <section className="pt-6">
+          <h2 className="text-gray-50 text-3xl">Meus repositórios Github</h2>
+          <RepositoriesList repositories={repositories} isLoading={isLoading} />
+        </section>
       </div>
     </section>
   );
